@@ -6,13 +6,17 @@ using UnityEngine.Events;
 public class InputManager : MonoSingleton<InputManager>
 {
 
-    private Vector3 inputDrag;
-    private Vector2 prevMousePos;
-    private float sideMovementTarget;
+    [HideInInspector] public Vector3 inputDrag;
+    [HideInInspector] public Vector2 prevMousePos;
 
     public bool isGameStart = false;
 
     [SerializeField] private UnityEvent OnGameStart;
+
+    void Update()
+    {
+        IsGameStart();    
+    }
 
      private Vector2 mousePositionCM
     {
@@ -31,16 +35,21 @@ public class InputManager : MonoSingleton<InputManager>
         if(Input.GetMouseButtonDown(0))
         {
             prevMousePos = mousePositionCM;
+            Debug.Log( "Mouse Button Down");
         }
         else if(Input.GetMouseButton(0))
         {
             var distance = mousePositionCM - prevMousePos;
             inputDrag = distance;
             prevMousePos = mousePositionCM;
+            
+            Debug.Log("Mouse Button");
         }
-        else
+        else if(Input.GetMouseButtonUp(0))
         {
             inputDrag = Vector2.zero;
+
+            Debug.Log("Mouse Button Up");
         }
     }
 

@@ -4,38 +4,39 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField] Transform playerRoot;
+
     [SerializeField] float speed = 7;
 
     [SerializeField] private float sidewaysMovementSensivity;
     [SerializeField] private float sidewaysMovementLerpSensivity;
     [SerializeField] private float sidewaysLimitPos;
  
-    private Vector3 inputDrag;
-    private Vector2 prevMousePos;
     private float sideMovementTarget;
 
     // Update is called once per frame
     void Update()
     {
-        InputManager.Instance.IsGameStart();
-        
+
         if(InputManager.Instance.isGameStart)
         {
+            InputManager.Instance.GetInput();
+            MoveSideways();
             MovePlayer();
         }
     }
 
     private void MovePlayer()
     {
-        transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        playerRoot.Translate(Vector3.forward * speed * Time.deltaTime);
     }
 
     private void MoveSideways()
     {
-        sideMovementTarget += inputDrag.x * sidewaysMovementSensivity;
+        sideMovementTarget += InputManager.Instance.inputDrag.x * sidewaysMovementSensivity;
         sideMovementTarget = Mathf.Clamp(sideMovementTarget, -sidewaysLimitPos, sidewaysLimitPos);
-        var localPos = transform.localPosition;
+        var localPos = playerRoot.localPosition;
         localPos.x = Mathf.Lerp(localPos.x, sideMovementTarget, Time.deltaTime * sidewaysMovementLerpSensivity);
-        transform.localPosition = localPos;
+        playerRoot.localPosition = localPos;
     }
 }
