@@ -12,5 +12,10 @@ public class PlayerCollision : MonoBehaviour
             UIManager.Instance.LevelFail();
             Time.timeScale = 0;
         }
+
+        if(other.gameObject.CompareTag("Finish"))
+        {
+            InputManager.Instance.isSwerveMechanismActive = false;
+        }
     }
 }

@@ -11,6 +11,8 @@ public class InputManager : MonoSingleton<InputManager>
 
     public bool isGameStart = false;
 
+    public bool isSwerveMechanismActive = true;
+
     [SerializeField] private UnityEvent OnGameStart;
 
     void Update()
@@ -30,27 +32,22 @@ public class InputManager : MonoSingleton<InputManager>
         }
     }
 
-    public void GetInput()
+    public void SwerveInput()
     {
         if(Input.GetMouseButtonDown(0))
         {
             prevMousePos = mousePositionCM;
-            Debug.Log( "Mouse Button Down");
         }
         else if(Input.GetMouseButton(0))
         {
             var distance = mousePositionCM - prevMousePos;
             inputDrag = distance;
             prevMousePos = mousePositionCM;
-            
-            Debug.Log("Mouse Button");
         }
         else if(Input.GetMouseButtonUp(0))
         {
             inputDrag = Vector2.zero;
-
-            Debug.Log("Mouse Button Up");
-        }
+        }        
     }
 
     public void IsGameStart()

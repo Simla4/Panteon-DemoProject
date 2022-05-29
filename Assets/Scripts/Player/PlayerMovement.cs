@@ -18,9 +18,9 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
 
-        if(InputManager.Instance.isGameStart)
+        if(InputManager.Instance.isGameStart && InputManager.Instance.isSwerveMechanismActive)
         {
-            InputManager.Instance.GetInput();
+            InputManager.Instance.SwerveInput();
             MoveSideways();
             MovePlayer();
         }
