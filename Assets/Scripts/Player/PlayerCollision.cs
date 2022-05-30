@@ -9,8 +9,7 @@ public class PlayerCollision : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Obstacle"))
         {
-            UIManager.Instance.LevelFail();
-            Time.timeScale = 0;
+            gameObject.transform.position = Vector3.zero;
         }
 
         if(other.gameObject.CompareTag("Finish"))

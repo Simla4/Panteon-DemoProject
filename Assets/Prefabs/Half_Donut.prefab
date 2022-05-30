@@ -384,7 +384,7 @@ GameObject:
   - component: {fileID: 6001428742236598513}
   - component: {fileID: 5368692167951562394}
   - component: {fileID: 163853300842210595}
-  - component: {fileID: 9015020255184224108}
+  - component: {fileID: 8446246623118215289}
   m_Layer: 0
   m_Name: Half_Donut_Stick
   m_TagString: Obstacle
@@ -455,29 +455,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!61 &9015020255184224108
-BoxCollider2D:
+--- !u!65 &8446246623118215289
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8830817869210354206}
-  m_Enabled: 1
-  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.1698603, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.33967566, y: 0.02}
-  m_EdgeRadius: 0
+  m_Size: {x: 0.33967566, y: 0.02, z: 0.0184834}
+  m_Center: {x: 0.1698603, y: 0, z: -0.0007582903}
