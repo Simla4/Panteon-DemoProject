@@ -16,6 +16,7 @@ public class PlayerCollision : MonoBehaviour
         {
             InputManager.Instance.isSwerveMechanismActive = false;
             AnimationController.Instance.ChangeAnimation(gameObject, AnimationType.Idle);
+            CameraController.Instance.ChangeTheCamera();
         }
     }
 }
