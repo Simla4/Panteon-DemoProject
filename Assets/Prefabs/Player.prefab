@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 7986133838770403818}
   - component: {fileID: 5470019616646745759}
   - component: {fileID: 3787205946759595004}
+  - component: {fileID: 804708033069707037}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -110,9 +111,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerRoot: {fileID: 8237206194808535611}
   speed: 5
-  sidewaysMovementSensivity: 7.5
-  sidewaysMovementLerpSensivity: 7.5
+  sidewaysMovementSensivity: 5
+  sidewaysMovementLerpSensivity: 5
   sidewaysLimitPos: 3.5
+  animationController: {fileID: 804708033069707037}
 --- !u!114 &3787205946759595004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,6 +127,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60a6fae06e3411041a29f3438079d1de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animationController: {fileID: 804708033069707037}
+--- !u!114 &804708033069707037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7601758146987528591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61239b2d991972543ab8b0603566d15c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 153593258582517997}
+--- !u!95 &153593258582517997
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8648188881163912002}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 10fea320da33407438e9be04199ea7d2, type: 3}
+  m_Controller: {fileID: 9100000, guid: f9ede9d2633a8c7429203122cf0b63d9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &4701203927229780854
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -198,6 +233,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c195aa5c7474ffe4485826d3b7eb1969, type: 3}
+--- !u!1 &8648188881163912002 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4123751242099970100, guid: c195aa5c7474ffe4485826d3b7eb1969, type: 3}
+  m_PrefabInstance: {fileID: 4701203927229780854}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8308958085954820600 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3634775758670498446, guid: c195aa5c7474ffe4485826d3b7eb1969, type: 3}

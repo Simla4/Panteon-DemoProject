@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float sidewaysMovementSensivity;
     [SerializeField] private float sidewaysMovementLerpSensivity;
     [SerializeField] private float sidewaysLimitPos;
+
+    [SerializeField] private AnimationController animationController;
  
     private float sideMovementTarget;
 
@@ -23,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
             InputManager.Instance.SwerveInput();
             MoveSideways();
             MovePlayer();
+            animationController.Run();
         }
     }
 
