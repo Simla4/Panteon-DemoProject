@@ -159,19 +159,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slot:
-    Index: 0
+    Index: 1
     Name: _MainTex
-  coord: 1
+  coord: 0
   group:
     index: 0
   undoRedo: 0
-  stateLimit: 10
+  stateLimit: 0
   saveLoad: 0
   saveName: 
-  width: 512
-  height: 512
+  width: 1024
+  height: 1024
   texture: {fileID: 0}
-  color: {r: 1, g: 1, b: 1, a: 1}
+  color: {r: 0, g: 0, b: 0, a: 0}
   format: 0
   mipMaps: 0
   filter: -1
@@ -200,7 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9986da839a92d2d42975bac1e96cd24c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: 0
+  index: 1
   activated: 0
   current: {fileID: 0}
   original: {fileID: 0}
@@ -246,7 +246,7 @@ MonoBehaviour:
   async: 1
   downsampleSteps: 3
   registeredPaintableTexture: {fileID: 43359196}
-  cooldown: -47.64489
+  cooldown: -57.15068
   currentReader:
     requested: 0
     buffer: {fileID: 0}
@@ -1203,7 +1203,7 @@ MonoBehaviour:
   async: 1
   downsampleSteps: 3
   registeredPaintableTexture: {fileID: 0}
-  cooldown: -39.59948
+  cooldown: -43.932796
   currentReader:
     requested: 0
     buffer: {fileID: 0}

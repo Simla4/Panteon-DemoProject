@@ -126,3 +126,4 @@ Material:
     - _MainTex_Transform: {r: 1, g: 1, b: 0, a: 0}
     - _MetallicGlossMap_Transform: {r: 1, g: 1, b: 0, a: 0}
     - _ParallaxMap_Transform: {r: 1, g: 1, b: 0, a: 0}
+  m_BuildTextureStacks: []
