@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 3267397599746636615}
   - component: {fileID: 5739297363996809998}
   - component: {fileID: 6994358956679600238}
-  - component: {fileID: 8811850126777790514}
   m_Layer: 0
   m_Name: OpponentCharacter
   m_TagString: Untagged
@@ -79,7 +78,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14e627333f3d14341bddd54559729b17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationController: {fileID: 8811850126777790514}
   speed: 3
   targetVelocity: 10
   numberOfRays: 17
@@ -97,7 +95,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3473fd408568244bbb13121db1d213f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationController: {fileID: 8811850126777790514}
 --- !u!195 &6994358956679600238
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -120,19 +117,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &8811850126777790514
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 815489513438325421}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61239b2d991972543ab8b0603566d15c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 6195366023764512935}
 --- !u!1 &7243198954952950893
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,10 +220,5 @@ PrefabInstance:
 --- !u!4 &3451515476359198800 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4359791412262174889, guid: dea0f057b7c1c3e45be77edfe8f14611, type: 3}
-  m_PrefabInstance: {fileID: 1398130435800217849}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &6195366023764512935 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 5088351434933184606, guid: dea0f057b7c1c3e45be77edfe8f14611, type: 3}
   m_PrefabInstance: {fileID: 1398130435800217849}
   m_PrefabAsset: {fileID: 0}

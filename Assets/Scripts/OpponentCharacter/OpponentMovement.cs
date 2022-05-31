@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class OpponentMovement : MonoBehaviour
 {
-    [SerializeField] private AnimationController animationController;
-
     [SerializeField] private float speed = 6f;
 
     [SerializeField] private float targetVelocity = 10;
@@ -21,7 +19,7 @@ public class OpponentMovement : MonoBehaviour
         {
             MoveOpponent();
             AvoidObstacle();
-            animationController.Run();
+            AnimationController.Instance.ChangeAnimation(gameObject, AnimationType.Run);
         }
     }
 

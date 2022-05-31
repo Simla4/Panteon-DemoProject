@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class OpponentCollision : MonoBehaviour
 {
-    [SerializeField] private AnimationController animationController;
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.CompareTag("Obstacle"))
@@ -14,7 +13,7 @@ public class OpponentCollision : MonoBehaviour
 
         if(other.gameObject.CompareTag("Finish"))
         {
-            animationController.Idle();
+            AnimationController.Instance.ChangeAnimation(gameObject, AnimationType.Idle);
         }
     }
 }

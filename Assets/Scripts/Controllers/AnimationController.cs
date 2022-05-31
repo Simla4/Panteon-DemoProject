@@ -2,17 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AnimationController : MonoBehaviour
+public class AnimationController : MonoSingleton<AnimationController>
 {
-    [SerializeField] private Animator animator;
+    //[SerializeField] private Animator animator;
 
-    public void Run()
+    public void ChangeAnimation(GameObject unit, AnimationType animationType)
     {
-        animator.SetTrigger("Run");
-    }
+        var animator = unit.GetComponentInChildren<Animator>();
 
-    public void Idle()
-    {
-        animator.SetTrigger("Idle");
+        animator.SetTrigger(animationType.ToString());
     }
+}
+
+public enum AnimationType
+{
+    Run,
+    Idle
 }

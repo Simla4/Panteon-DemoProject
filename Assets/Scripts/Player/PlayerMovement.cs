@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float sidewaysMovementLerpSensivity;
     [SerializeField] private float sidewaysLimitPos;
 
-    [SerializeField] private AnimationController animationController;
+    private bool isAnimationChange;
  
     private float sideMovementTarget;
 
@@ -25,8 +25,18 @@ public class PlayerMovement : MonoBehaviour
             InputManager.Instance.SwerveInput();
             MoveSideways();
             MovePlayer();
-            animationController.Run();
+            ChangePlayerAnimationOnce();
         }
+    }
+
+    private void ChangePlayerAnimationOnce()
+    {
+        if(!isAnimationChange)
+        {
+            isAnimationChange = true;
+            AnimationController.Instance.ChangeAnimation(gameObject, AnimationType.Run);
+        }
+            
     }
 
     private void MovePlayer()

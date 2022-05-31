@@ -5,7 +5,6 @@ using UnityEngine.Events;
 
 public class PlayerCollision : MonoBehaviour
 {
-    [SerializeField] private AnimationController animationController;
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.CompareTag("Obstacle"))
@@ -16,7 +15,7 @@ public class PlayerCollision : MonoBehaviour
         if(other.gameObject.CompareTag("Finish"))
         {
             InputManager.Instance.isSwerveMechanismActive = false;
-            animationController.Idle();
+            AnimationController.Instance.ChangeAnimation(gameObject, AnimationType.Idle);
         }
     }
 }
