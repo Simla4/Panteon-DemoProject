@@ -77,9 +77,9 @@ CapsuleCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.3310189
-  m_Height: 1.7149608
+  m_Height: 1.3627989
   m_Direction: 1
-  m_Center: {x: -0.01780504, y: 0.7147378, z: 0.019672185}
+  m_Center: {x: -0.01780504, y: 0.53865683, z: 0.019672185}
 --- !u!54 &7986133838770403818
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -108,11 +108,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7acd69a760f6db343818878d9c2a27a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerRoot: {fileID: 0}
+  playerRoot: {fileID: 8237206194808535611}
   speed: 5
-  sidewaysMovementSensivity: 0
-  sidewaysMovementLerpSensivity: 0
-  sidewaysLimitPos: 0
+  sidewaysMovementSensivity: 7.5
+  sidewaysMovementLerpSensivity: 7.5
+  sidewaysLimitPos: 3.5
 --- !u!114 &3787205946759595004
 MonoBehaviour:
   m_ObjectHideFlags: 0

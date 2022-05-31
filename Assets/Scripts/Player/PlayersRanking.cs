@@ -6,6 +6,7 @@ using TMPro;
 public class PlayersRanking : MonoBehaviour
 {
     [SerializeField] private List<Transform> competitor;
+    [SerializeField] private Transform playerTransform;
 
     [SerializeField] private TextMeshProUGUI ranking;
 
@@ -19,21 +20,24 @@ public class PlayersRanking : MonoBehaviour
     {
         for (int i = 0; i < competitor.Count; i++)
         {
-            var smallestValZ = competitor[i].position.z;
-            var smallestVal = i;
+            var biggestValZ = competitor[i].position.z;
+            var biggestVal = i;
 
             for (int j = 0; j < competitor.Count; j++)
             {
                 var currentValZ = competitor[j].position.z;
-                if(currentValZ < smallestValZ)
+                if(currentValZ > biggestValZ)
                 {
-                    smallestVal = j;
+                    biggestVal = j;
                 }
             }
 
-            var tempVar = competitor[smallestVal];
-            competitor[smallestVal] = competitor[i];
+            var tempVar = competitor[biggestVal];
+            competitor[biggestVal] = competitor[i];
             competitor[i] = tempVar;
         }
+
+        int playerRank = competitor.IndexOf(playerTransform) + 1;
+        ranking.text = playerRank.ToString();
     }
 }
