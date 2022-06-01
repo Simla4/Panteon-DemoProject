@@ -12,6 +12,8 @@ public class OpponentMovement : MonoBehaviour
 
     [SerializeField] private float rayRange = 2;
 
+    private bool isAnimationChange;
+
     // Update is called once per frame
     void Update()
     {
@@ -19,8 +21,18 @@ public class OpponentMovement : MonoBehaviour
         {
             MoveOpponent();
             AvoidObstacle();
+            ChangePlayerAnimationOnce();
+        }
+    }
+
+     private void ChangePlayerAnimationOnce()
+    {
+        if(!isAnimationChange)
+        {
+            isAnimationChange = true;
             AnimationController.Instance.ChangeAnimation(gameObject, AnimationType.Run);
         }
+            
     }
 
     private void MoveOpponent()

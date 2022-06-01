@@ -78,8 +78,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14e627333f3d14341bddd54559729b17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  targetVelocity: 10
+  speed: 1
+  targetVelocity: 4
   numberOfRays: 17
   angle: 90
   rayRange: 2
