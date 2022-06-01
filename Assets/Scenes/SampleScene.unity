@@ -1066,8 +1066,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 474095222}
-  m_LocalRotation: {x: 0.34950745, y: 0.000000016121236, z: -0.000000006013758, w: 0.9369336}
-  m_LocalPosition: {x: 0, y: 6.5, z: -3.0900002}
+  m_LocalRotation: {x: 0.33100694, y: -0.000000015031688, z: 0.0000000052728315, w: 0.9436283}
+  m_LocalPosition: {x: 0, y: 6, z: -3.0900002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 654632025}
@@ -1441,7 +1441,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 1
-  m_FollowOffset: {x: 0, y: 6.5, z: -7.5}
+  m_FollowOffset: {x: 0, y: 6, z: -7.5}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -2404,8 +2404,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.34950745, y: 0.000000016121236, z: -0.000000006013758, w: 0.9369336}
-  m_LocalPosition: {x: 0, y: 6.5, z: -3.0900002}
+  m_LocalRotation: {x: 0.33100694, y: -0.000000015031688, z: 0.0000000052728315, w: 0.9436283}
+  m_LocalPosition: {x: 0, y: 6, z: -3.0900002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1269008162}
@@ -3337,7 +3337,7 @@ MonoBehaviour:
   async: 1
   downsampleSteps: 3
   registeredPaintableTexture: {fileID: 1469970200}
-  cooldown: -248.07655
+  cooldown: -255.27275
   currentReader:
     requested: 0
     buffer: {fileID: 0}
