@@ -3297,7 +3297,7 @@ MonoBehaviour:
   async: 1
   downsampleSteps: 3
   registeredPaintableTexture: {fileID: 1469970200}
-  cooldown: -211.20818
+  cooldown: -218.75175
   currentReader:
     requested: 0
     buffer: {fileID: 0}
@@ -4573,14 +4573,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: OpponentCharacter
       objectReference: {fileID: 0}
-    - target: {fileID: 3267397599746636615, guid: 819e168ab779fc24dbd1b9db8956ed0c, type: 3}
-      propertyPath: speed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3267397599746636615, guid: 819e168ab779fc24dbd1b9db8956ed0c, type: 3}
-      propertyPath: targetVelocity
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 6994358956679600238, guid: 819e168ab779fc24dbd1b9db8956ed0c, type: 3}
       propertyPath: m_Speed
       value: 1
@@ -4908,7 +4900,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8995685666784130957, guid: e8d1a554cad07f146b9d11c4b9df662d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.19
+      value: -1.92
       objectReference: {fileID: 0}
     - target: {fileID: 8995685666784130957, guid: e8d1a554cad07f146b9d11c4b9df662d, type: 3}
       propertyPath: m_LocalPosition.y
